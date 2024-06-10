@@ -1,0 +1,20 @@
+Steps for creatig CRUD App in Dotnet 
+
+1.start vs
+2.Create new project 
+3.Search Web >> select ASP.NET Web App(Razor Pages)
+4. Give name to Project
+5.Project will open 
+6. Create new Folder Named 'Model' >> create class in this with table fields
+7. Pages>>Make folder name with Class name in Model  >> right click on That folder >> Add >> Scaffolding >> select razor pages CRUD 
+8.Tools>>Nuget Package Manager >>Package Manager  Console 
+9. Give command add-migration intial -->> it will create new Folder named As Migratrion and migrarte data 
+10. give Command update-database  -->> it will make update database
+11. run the project
+
+Steps for showing data in database (SqlServer)
+
+1.Click on SQL server Object Explorer
+2. select MSSQLLocalDB
+3.select db 
+4. right click on dbo.YourDB name or Model Class name (Ex-dbo.User)
