@@ -1,0 +1,45 @@
+﻿@page
+@model CRUD_APP.Pages.Users.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="User.id" />
+            <div class="form-group">
+                <label asp-for="User.name" class="control-label"></label>
+                <input asp-for="User.name" class="form-control" />
+                <span asp-validation-for="User.name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.age" class="control-label"></label>
+                <input asp-for="User.age" class="form-control" />
+                <span asp-validation-for="User.age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.qualification" class="control-label"></label>
+                <input asp-for="User.qualification" class="form-control" />
+                <span asp-validation-for="User.qualification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
